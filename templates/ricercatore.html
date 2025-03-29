@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Osservazioni di {{ ricercatore.nome }} {{ ricercatore.cognome }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Osservazioni di {{ ricercatore.nome }} {{ ricercatore.cognome }}</h1>
+        <table>
+            <tr>
+                <th>Data</th>
+                <th>Durata (minuti)</th>
+                <th>Condizioni Meteo</th>
+                <th>Corpo Celeste</th>
+            </tr>
+            {% for osservazione in osservazioni %}
+            <tr>
+                <td>{{ osservazione.timestamp }}</td>
+                <td>{{ osservazione.durata_minuti }}</td>
+                <td>{{ osservazione.condizioni_meteo }}</td>
+                <td>{{ osservazione.corpo_celeste.nome }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Torna alla Home</a>
+    </div>
+</body>
+</html>

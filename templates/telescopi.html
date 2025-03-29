@@ -1,0 +1,30 @@
+/* telescopi.html */
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telescopi</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista dei Telescopi</h1>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Posizione</th>
+                <th>Apertura</th>
+                <th>Tipo</th>
+            </tr>
+            {% for telescopio in telescopi %}
+            <tr>
+                <td>{{ telescopio.nome }}</td>
+                <td>{{ telescopio.posizione }}</td>
+                <td>{{ telescopio.apertura }}</td>
+                <td>{{ telescopio.tipo }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Torna alla Home</a>
+    </div>
+</body>
+</html>

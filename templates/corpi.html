@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Corpi Celesti</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista dei Corpi Celesti</h1>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Magnitudine</th>
+                <th>Distanza (parsec)</th>
+            </tr>
+            {% for corpo in corpi %}
+            <tr>
+                <td>{{ corpo.nome }}</td>
+                <td>{{ corpo.categoria }}</td>
+                <td>{{ corpo.magnitudine }}</td>
+                <td>{{ corpo.distanza_parsec }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Torna alla Home</a>
+    </div>
+</body>
+</html>
